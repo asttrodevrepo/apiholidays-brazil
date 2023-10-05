@@ -9,6 +9,7 @@ class City (
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private val id: Int,
+    @Column(nullable = false)
     private val name: String,
 
     @ManyToOne
