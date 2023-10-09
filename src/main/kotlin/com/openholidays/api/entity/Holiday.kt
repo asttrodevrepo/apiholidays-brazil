@@ -1,12 +1,6 @@
 package com.openholidays.api.entity
 
-import jakarta.persistence.Column
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
-import jakarta.persistence.JoinColumn
-import jakarta.persistence.ManyToOne
+import jakarta.persistence.*
 import java.io.Serializable
 import java.time.LocalDate
 
@@ -14,17 +8,17 @@ import java.time.LocalDate
 class Holiday (
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private val id: Int,
+    val id: Int,
     @Column(nullable = false)
-    private val name: String = "",
+    val name: String = "",
     @Column(nullable = false)
-    private val holidayDate: LocalDate,
+    val holidayDate: LocalDate,
 
     @ManyToOne
     @JoinColumn(name = "city_id")
-    private val city: City? = null,
+    val city: City? = null,
     @ManyToOne
     @JoinColumn(name = "state_id")
-    private val state: State? = null,
+    val state: State? = null,
 
 ): AuditModel(), Serializable

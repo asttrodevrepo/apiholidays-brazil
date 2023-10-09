@@ -8,13 +8,13 @@ class City (
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private val id: Int,
+    val id: Int,
     @Column(nullable = false)
-    private val name: String,
+    val name: String,
 
     @ManyToOne
     @JoinColumn(name = "state_id")
-    private val state: State? = null,
+    val state: State? = null,
 ): AuditModel(), Serializable
 
 
