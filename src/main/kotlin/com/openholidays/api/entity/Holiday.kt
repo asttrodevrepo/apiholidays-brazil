@@ -7,7 +7,7 @@ import java.time.LocalDate
 @Entity
 class Holiday (
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Int,
     @Column(nullable = false)
     val name: String = "",
