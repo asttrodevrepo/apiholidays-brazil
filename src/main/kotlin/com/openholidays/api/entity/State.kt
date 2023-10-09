@@ -4,7 +4,7 @@ import jakarta.persistence.*
 import java.io.Serializable
 
 @Entity
-class State(
+data class State(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Int? = null,

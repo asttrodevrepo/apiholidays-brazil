@@ -5,7 +5,7 @@ import java.io.Serializable
 import java.time.LocalDate
 
 @Entity
-class Holiday (
+data class Holiday (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Int,

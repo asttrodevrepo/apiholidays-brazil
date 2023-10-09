@@ -4,7 +4,7 @@ import jakarta.persistence.*
 import java.io.Serializable
 
 @Entity
-class City (
+data class City (
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
